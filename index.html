@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Engineering Portfolio</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #ffffff;
+      color: #0a3d91;
+    }
+
+    a {
+      color: #0a3d91;
+      text-decoration: none;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border-bottom: 2px solid #e6e6e6;
+    }
+
+    .nav-right {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main content */
+    main {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+
+    /* Profile image */
+    .profile-pic {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      border-radius: 8px;
+    }
+
+    .intro h1 {
+      margin-top: 0;
+      font-size: 2.5rem;
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 500px;
+    }
+
+    /* Responsive */
+    @media (max-width: 800px) {
+      main {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .profile-pic {
+        width: 220px;
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="nav-left">
+      <a href="index.html">Home</a>
+    </div>
+
+    <div class="nav-right">
+      <a href="hobbies.html">Hobbies</a>
+      <a href="projects.html">Projects</a>
+      <a href="cv.html">CV</a>
+    </div>
+  </nav>
+
+  <main>
+    <img src="images/profile.jpg" alt="Photo of me" class="profile-pic"/>
+
+    <div class="intro">
+      <h1>Hi, I'm [Your Name]</h1>
+      <p>
+        I’m an engineering student with interests in design, analysis,
+        and building practical solutions to real-world problems.
+        This site showcases my projects, hobbies, and professional experience.
+      </p>
+    </div>
+  </main>
+
+</body>
+</html>
