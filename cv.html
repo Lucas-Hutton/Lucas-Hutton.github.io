@@ -75,6 +75,87 @@
     color: white;
   }
 
+  /* CV Layout */
+  .cv-container {
+    max-width: 900px;
+    margin: auto;
+    text-align: left;
+    line-height: 1.6;
+  }
+  .cv-page {
+    color: #000000;
+    background: white;
+    max-width: 880px;
+    margin: 40px auto;
+    padding: 50px 60px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    border-radius: 4px;
+    line-height: 1.3;
+  }
+
+
+
+  .cv-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .cv-contact {
+    margin-top: 10px;
+    font-size: 0.95rem;
+  }
+
+  .cv-section {
+    margin-top: 35px;
+  }
+
+  .cv-section h2 {
+    border-bottom: 2px solid #e6e6e6;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+  }
+
+  .cv-entry {
+    margin-bottom: 20px;
+  }
+
+  .cv-entry-title {
+    font-weight: bold;
+  }
+
+  .cv-entry-date {
+    float: right;
+    opacity: 0.8;
+  }
+
+  ul {
+    margin-top: 8px;
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 6px;
+  }
+
+  .cv-skills {
+    margin-top: 10px;
+  }
+
+  .download-btn {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 10px 18px;
+    border: 2px solid #0a3d91;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.2s ease;
+  }
+
+  .download-btn:hover {
+    background-color: #0a3d91;
+    color: white;
+  }
+
 </style>
 </head>
 
@@ -94,26 +175,181 @@
 
 <main>
 
-  <h1>Curriculum Vitae</h1>
+<h1>Curriculum Vitae</h1>
 
-  <img 
-    src="images/cv_preview-1.png" 
-    alt="CV Preview"
-    class="cv-preview"
-  >
-  <img 
-    src="images/cv_preview-2.png" 
-    alt="CV Preview"
-    class="cv-preview"
-  >
+<a href="CV_LucasHutton.pdf" class="download-btn" download>Download PDF Version</a>
 
-  <br>
 
-  <a href="CV_LucasHutton.pdf" class="download-btn" download>
-    Download PDF
-  </a>
+<div class="cv-container">
+<div class="cv-page">
+
+
+<div class="cv-header">
+<h2>Lucas Hutton</h2>
+<div class="cv-contact">
+lucashutton03@gmail.com | www.linkedin.com/in/lucashutton-engineering | (+44) 7827 918893
+</div>
+</div>
+
+
+<div class="cv-section">
+<h2>PROFILE</h2>
+<p>
+Motivated and analytically minded MEng Mechanical Engineering graduate with a strong foundation in mechanical, structural, and energy systems. Experienced in applying engineering principles to vibration analysis, renewable energy design, and structural assessments, with practical skills in MATLAB, Python, CAD, and FEA. Demonstrates a track record of contributing to multidisciplinary projects, optimising system performance, and communicating technical findings effectively. Eager to apply problem-solving abilities across mechanical, structural, and energy engineering roles.
+</p>
+</div>
+
+
+<div class="cv-section">
+<h2>EDUCATION</h2>
+
+<div class="cv-entry">
+<div class="cv-entry-title">
+University of Bristol
+<span class="cv-entry-date">Sept 2021 – May 2025</span>
+</div>
+<p>MEng (Hons) Mechanical Engineering – First Class</p>
+<p>
+Relevant Modules: Applied Solid Mechanics (74%), Fluid Mechanics & Heat Transfer (70%), Renewable Energy Engineering (70%), Multivariable & Nonlinear Control (67%)
+</p>
+</div>
+
+<div class="cv-entry">
+<div class="cv-entry-title">
+Hampton School
+<span class="cv-entry-date">Sept 2014 – June 2021</span>
+</div>
+<p>Maths (A*), Further Maths (A*), Physics (A*), Computer Science (A)</p>
+</div>
+
+</div>
+
+
+<div class="cv-section">
+<h2>WORK EXPERIENCE</h2>
+
+<div class="cv-entry">
+<div class="cv-entry-title">
+Research Assistant - University of Bristol
+<span class="cv-entry-date">Jan – July 2024</span>
+</div>
+
+<ul>
+<li>Supported a multidisciplinary engineering team analysing vibration performance in building and structural systems, contributing to design-led decision making.</li>
+<li>Developed MATLAB-based analytical models to assess and optimise passive mechanical systems, supporting early-stage engineering design evaluations.</li>
+<li>Assessed alternative mechanical design options, achieving a 44% improvement in vibration performance metrics against defined design criteria.</li>
+<li>Improved model efficiency to enable rapid evaluation of multiple design options under constrained project timescales.</li>
+<li>Presented technical findings to senior engineers, supporting clear communication of design implications and project outcomes.</li>
+</ul>
+</div>
+
+<div class="cv-entry">
+<div class="cv-entry-title">
+Mechanical Engineering Intern - Turnstone Construction Ltd.
+<span class="cv-entry-date">June – Aug 2023</span>
+</div>
+
+<ul>
+<li>Assisted with façade inspections by applying mechanical and structural principles to identify defects, assess risk, and inform remedial design strategies.</li>
+<li>Conducted site inspections in accordance with CDM 2015 and building compliance requirements, assessing fire stopping, weatherproofing, access, and maintainability.</li>
+<li>Developed a defect inspection tool to improve survey efficiency, presenting technical findings to senior management to support project funding decisions.</li>
+<li>Collaborated with senior engineers and surveyors on live projects, gaining exposure to MEP systems, plant coordination, electrical containment, and public health engineering.</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+<div class="cv-page">
+<div class="cv-section">
+<h2>ENGINEERING PROJECTS</h2>
+
+<div class="cv-entry">
+<div class="cv-entry-title">
+University of Bristol Renewable Energy Generation Proposal
+<span class="cv-entry-date">Sept – Dec 2024</span>
+</div>
+<ul>
+<li>Co-developed a sustainability strategy to support the University of Bristol’s target of net zero carbon by 2030, selected for submission to the sustainability team.</li>
+<li>Conducted energy usage analysis and heat-loss modelling to identify operational and fabric-led energy reduction strategies using Building Energy Management Systems.</li>
+<li>Designed a hybrid wind-solar plant integrated into the veterinary campus, ensuring compliance with UK planning regulations, offsetting 29% of campus electricity demand.</li>
+<li>Conducted life-cycle cost analysis to assess financial viability, identifying a £1.3M annual net benefit and a 16-year break-even period</li>
+</ul>
+</div>
+
+<div class="cv-entry">
+<div class="cv-entry-title">
+Passive Velocity-Displacement-Dependent Damper
+<span class="cv-entry-date">Jan – May 2025</span>
+</div>
+<ul>
+<li>Designed and developed a novel variable damper, applying vibration control principles to improve system performance.</li>
+<li>Utilised CAD for custom hydraulic components, ensuring technical drawings were compliant with ISO 286-2 and designed for manufacture.</li>
+<li>Built and tested a physical prototype, validating simulation results, achieving a 32.3% improvement in vibration suppression over baseline systems.</li>
+</ul>
+</div>
+
+<div class="cv-entry">
+<div class="cv-entry-title">
+Structural Stress Analysis of Lifting Lug
+<span class="cv-entry-date">Oct – Dec 2023</span>
+</div>
+<ul>
+<li>Performed FEA structural assessments to verify deflection, stress, and safety factors under multiple load cases.</li>
+<li>Analysed strain gauge data to identify potential failure modes and inform inspection and maintenance planning.</li>
+</ul>
+</div>
+
+</div>
+
+
+<div class="cv-section">
+<h2>LEADERSHIP EXPERIENCE AND QUALIFICATIONS</h2>
+
+<div class="cv-entry">
+<div class="cv-entry-title">
+ESG For All Specialisation – Duke University Coursera
+<span class="cv-entry-date">Feb 2026</span>
+</div>
+<ul>
+<li>Completed self-directed learning on ESG principles within sustainable building design, informed by course materials and industry examples.</li>
+</ul>
+</div>
+
+<div class="cv-entry">
+<div class="cv-entry-title">
+Treasurer – University of Bristol Lifting Club
+<span class="cv-entry-date">July 2023 – June 2024</span>
+</div>
+<ul>
+<li>Set membership pricing and pitched the annual budget, balancing income from 100+ members against expenditure, resulting in a 27% increase in membership revenue.</li>
+</ul>
+</div>
+
+</div>
+
+
+<div class="cv-section">
+<h2>SKILLS</h2>
+<p class="cv-skills">
+Vibrational Analysis • Signal Analysis (Simulink) • Programming (Python, MATLAB) • CAD (Fusion360, AutoCAD, SolidWorks) • FEA (Abaqus) • Energy analysis and BIM (Revit)
+</p>
+</div>
+
+
+<div class="cv-section">
+<h2>INTERESTS</h2>
+<p>Formula 1, Art / Painting, Tennis</p>
+</div>
+</div>
+
+
+
+</div>
 
 </main>
+
 
 </body>
 </html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>FEA Experience</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #0a3d91;
+  }
+
+  a {
+    color: #0a3d91;
+    text-decoration: none;
+  }
+
+  /* Navbar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 2px solid #e6e6e6;
+  }
+
+  .nav-right {
+    display: flex;
+    gap: 30px;
+  }
+
+  nav a {
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* Page Layout */
+  main {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 40px;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  .project-subtitle {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    opacity: 0.8;
+  }
+
+  p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+  }
+
+  /* Project Images */
+.project-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 40px auto;
+  border-radius: 8px;
+}
+.project-image-small {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 30px auto;
+  border-radius: 8px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-left">
+    <a href="index.html">Home</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="hobbies.html">Hobbies</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="cv.html">CV</a>
+  </div>
+</nav>
+
+<main>
+
+  <h1>FEA Stress Analysis</h1>
+  <div class="project-subtitle"></div>
+
+
+<h3>Lifting Lug Case Study</h3>
+<p>
+This project was a hypothetical study into the structural integrity and fatigue performance of a lifting lug under static and vibration-induced cyclic loading. Finite element analysis was used to quantify safety factors for static failure, while crack growth caused by cyclic loading was analysed using numerical modelling techniques.
+</p>
+<p>
+ABAQUS finite element analysis was used to determine the forces required to induce static failure within the lifting lug component under the expected loading regime.
+</p>
+
+<img src="./project-FEA/stress-analysis.png" alt="Static FEA results" class="project-image">
+
+<p>
+Results were post-processed using Python and error plots were generated to assess convergence of maximum stress and tip deflection with increasing mesh fidelity.
+</p>
+
+<img src="./project-FEA/convergence-analysis.png" alt="Mesh convergence results" class="project-image-small">
+<p>
+The analysis outcomes were used to determine whether the component was suitable for operation within its intended loading regime, and to assess whether design modification would be required to ensure safe long-term service.
+</p>
+
+<br><br>
+<h3>Suitcase Wheel Dynamic Impact Simulation</h3>
+
+<p>
+To evaluate the durability of alternative suitcase wheel designs, a dynamic finite element impact simulation was performed to model failure caused by handling and drop events during normal luggage operation. The analysis compared two supplier wheel configurations: a double-spinner wheel and a single-spinner wheel. Both designs were modelled in CAD using manufacturer technical drawings and assigned material of rubber for the tyres, polypropylene for the hub, and steel for the fasteners.
+</p>
+<img src="./project-FEA/suit-case-components.png" alt="Suitcase" class="project-image-small">
+
+
+<p>
+A dynamic impact study was conducted to replicate realistic drop loading scenarios commonly experienced during airport handling and transportation. The wheel assembly was modelled independently and assigned an initial velocity representing a vertical drop from a defined height. The impact velocity was calculated using gravitational acceleration relationships (i.e. v=√(2gh)).
+</p>
+
+<p>
+Simulation results identified stress concentrations occurring within the wheel hub near the axle connection for both designs. However, the single-spinner configuration demonstrated significantly improved structural performance, with a higher failure velocity and increased allowable drop height before material failure occurred. This corresponded to approximately a 68% improvement in safety factor compared to the original double-spinner configuration.
+</p>
+<img src="./project-FEA/suit-case-analysis.png" alt="Suitcase Results" class="project-image">
+
+<p>
+The simulation provided quantitative evidence that the single-spinner design offered improved durability while remaining compatible with existing manufacturing and supply chain constraints. The results supported selection of the alternative design to improve product reliability and reduce potential warranty failures. It was recognised that modelling assumptions introduce uncertainty, and physical validation testing was recommended to confirm simulation predictions.
+</p>
+
+</main>
+
+</body>
+</html>

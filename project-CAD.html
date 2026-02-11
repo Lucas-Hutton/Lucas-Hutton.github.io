@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CAD Experience</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #0a3d91;
+  }
+
+  a {
+    color: #0a3d91;
+    text-decoration: none;
+  }
+
+  /* Navbar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 2px solid #e6e6e6;
+  }
+
+  .nav-right {
+    display: flex;
+    gap: 30px;
+  }
+
+  nav a {
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* Page Layout */
+  main {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 40px;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  .project-subtitle {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    opacity: 0.8;
+  }
+
+  p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+  }
+
+  /* Project Images */
+.project-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 40px auto;
+  border-radius: 8px;
+}
+.project-image-small {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 30px auto;
+  border-radius: 8px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-left">
+    <a href="index.html">Home</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="hobbies.html">Hobbies</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="cv.html">CV</a>
+  </div>
+</nav>
+
+<main>
+
+  <h1>CAD Experience</h1>
+  <div class="project-subtitle"></div>
+
+
+<h3> Hydraulic Component Technical Specification for Variable Damper project</h3>
+<p>
+  Bespoke design and manufacture of multiple components was required to achieve the desired dynamic behaviour. I ensured components were designed for manufacture and assembly, and were safely specified for pressure, flow, and sealing requirements.
+</p>
+
+<p>
+  Here is an example of a custom hydraulic piston assembly which was designed in CAD and manufactured by the University of Bristol Machine Shop.
+</p>
+
+<img src="./project-CAD/piston-assembly.png" alt="CAD" class="project-image">
+
+<p>
+It was rewarding when the piston was assembled and functioned as intended, effectively sealing the hydraulic fluid and transferring input force into reliable pressure difference across the chambers.
+</p>
+<img src="./project-CAD/piston-manufactured.png" alt="CAD" class="project-image-small">
+
+<p>
+  Below are the techincal drawings for the custom valve casings which required to create the variable switching for the project. Active communication with the manufacturing team was necessary to ensure the components were detailed according to ISO-128 and ISO 286-2 and compatible with the manufacturing operations available within the shop floor.
+</p>
+
+<img src="./project-CAD/valve-technical-drawing.png" alt="CAD" class="project-image">
+
+</main>
+
+</body>
+</html>
