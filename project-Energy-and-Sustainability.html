@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ESG and Energy: Sustainable Campus Design</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #0a3d91;
+  }
+
+  a {
+    color: #0a3d91;
+    text-decoration: none;
+  }
+
+  /* Navbar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 2px solid #e6e6e6;
+  }
+
+  .nav-right {
+    display: flex;
+    gap: 30px;
+  }
+
+  nav a {
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* Page Layout */
+  main {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 40px;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  .project-subtitle {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    opacity: 0.8;
+  }
+
+  p {
+    line-height: 1.7;
+    margin-bottom: 10px;
+  }
+
+  /* Project Images */
+.project-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 40px auto;
+  border-radius: 8px;
+}
+.project-image-small {
+  max-width: 550px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 30px auto;
+  border-radius: 8px;
+}
+li {
+    padding-bottom: 15px;
+}
+.equation math {
+  display: block;
+  text-align: center;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-left">
+    <a href="index.html">Home</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="hobbies.html">Hobbies</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="cv.html">CV</a>
+  </div>
+</nav>
+
+<main>
+
+  <h1>ESG and Energy: Sustainable Campus Design</h1>
+  <div class="project-subtitle"></div>
+
+
+<h3> Summary</h3>
+
+<p>
+University of Bristol Renewable Energy Generation Proposal - Campus-scale decarbonisation study assessing the technical, planning, and financial feasibility of integrated renewable generation and storage to support a net-zero 2030 target.
+</p>
+<ul>
+  <li>20 GWh/year renewable generation (offsetting ~29% electricity demand)</li>
+  <li>£1.3M annual profit</li>
+  <li>16.5-year payback</li>
+  <li>4 ktCO₂/year reduction</li>
+</ul>
+
+<img src="./project-Energy-and-Sustainability/sustainability-cover.png" alt="Wind-Solar Plant Render" class="project-image-small">
+
+
+<h4>Heating & Building Physics Modelling:</h4>
+<p>
+Developed a building heat-loss model to quantify heating demand and evaluate BREEAM-aligned energy-reduction strategies. Heating demand was calculated using:
+</p>
+<div class="equation">
+  <math xmlns="http://www.w3.org/1998/Math/MathML">
+    <mrow>
+      <mover>
+        <mi>Q</mi>
+        <mo>˙</mo>
+      </mover>
+      <mo>=</mo>
+      <mi>H</mi>
+      <mo>·</mo>
+      <mo>(</mo>
+      <msub><mi>T</mi><mi>in</mi></msub>
+      <mo>−</mo>
+      <msub><mi>T</mi><mi>out</mi></msub>
+      <mo>)</mo>
+    </mrow>
+  </math>
+</div>
+<p>
+The modelling demonstrated that heating demand could be reduced by approximately 12.7%, supporting BREEAM energy performance credits and low-carbon building operation.
+</p>
+
+
+
+  <h4>Site Planning:</h4>
+  <p>
+    Developed a site plan to integrate a renewable energy generation plant within the existing veterinary campus. Land availability, access, proximity to grid connection points, and planning regulations were all considered. 
+  </p>
+  <img src="./project-Energy-and-Sustainability/site-plan.png" alt="Site Plan" class="project-image-small" style="max-width:600px">
+
+
+
+  <h4>Wind Generation Modelling:</h4>
+  <p>
+	  Modelled annual generation from wind turbines using wind speed data and turbine performance characteristics. Wind speeds were adjusted to hub height using a standard wind shear model to calculate time-resolved power output. The governing relationship underpinning the model is given by: 
+  </p>
+  <div class="equation">
+  <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+    <mi>P</mi>
+    <mo>=</mo>
+    <mfrac>
+      <mn>1</mn>
+      <mn>2</mn>
+    </mfrac>
+    <mi>ρ</mi>
+    <mi>A</mi>
+    <msub>
+      <mi>C</mi>
+      <mi>p</mi>
+    </msub>
+    <msup>
+      <mi>v</mi>
+      <mn>3</mn>
+    </msup>
+  </mrow>
+</math>
+</div>
+
+  <h4>Solar Generation Modelling:</h4>
+  <p>
+	  Developed a first-principles solar energy generation model for bifacial solar fences, incorporating direct, diffuse, and reflected irradiance using site-specific weather and solar geometry data. The model enabled accurate prediction of annual energy yield and informed grid integration. The governing equation from which the modelling was derived is given as: P=A⋅η⋅(I_dir+I_dif+I_ref)
+	</p>
+
+  <div class="equation">
+  <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mrow>
+    <mi>P</mi>
+    <mo>=</mo>
+    <mi>A</mi>
+    <mo>·</mo>
+    <mi>η</mi>
+    <mo>·</mo>
+    <mo>(</mo>
+    <msub><mi>I</mi><mi>dir</mi></msub>
+    <mo>+</mo>
+    <msub><mi>I</mi><mi>dif</mi></msub>
+    <mo>+</mo>
+    <msub><mi>I</mi><mi>ref</mi></msub>
+    <mo>)</mo>
+  </mrow>
+</math>
+</div>
+
+  <h4>Energy Generation Plots:</h4>
+  <p>
+    The modelling was used to provide accurate estimates of yearly energy generation from the renewable power plant and provide information regarding the hourly generation trends. 
+  </p> 
+
+  <img src="./project-Energy-and-Sustainability/total-generation.png" alt="Total Hourly Energy Generation" class="project-image-small" style="max-width:650px">
+
+  <h4>Battery Energy Storage System (BESS) Modelling:</h4>
+	<p>
+    Modelled a Battery Energy Storage System (BESS) to assess load-levelling performance and optimise energy dispatch. 
+  
+  <img src="./project-Energy-and-Sustainability/bess-redistribution.png" alt="Energy dispatched to grid redistributed" class="project-image-small" style="max-width:400px">
+
+	  The model simulated battery discharge based on hourly electricity demand while including state-of-charge limits and round-trip efficiency. The BESS reduced carbon intensity, supporting improved energy efficiency and grid resilience.
+  </p>
+	
+  <h4>Lifecycle Costing & Long-Term Performance Assessment:</h4>
+  <p>
+    Capital and operational costs of the renewable energy plant were estimated with data published by IRENA. This accounted for balance-of-system costs, maintenance, and asset replacement over a <strong>30-year design life</strong>. The analysis demonstrated that the upfront investment (<strong>£21.34M total CAPEX</strong>) was offset by annual revenues and carbon savings, delivering an estimated <strong>annual profit of £1.31M</strong>.
+  </p> 
+  <p>
+    This project demonstrates my abilities within ESG consulting and renewable energy/grid management. Building physics, energy modelling, and lifecycle costing were used to inform low-carbon infrastructure decisions. It shows my capability to reduce operational carbon emissions while maintaining financial and planning viability, aligned with BREEAM and UK regulatory frameworks.
+  </p>
+  
+</p>
+
+
+</main>
+
+</body>
+</html>
