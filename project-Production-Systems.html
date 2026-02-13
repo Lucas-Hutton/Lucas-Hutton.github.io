@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dynamics and Advanced Control: 2-DOF Robot Arm</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #0a3d91;
+  }
+
+  a {
+    color: #0a3d91;
+    text-decoration: none;
+  }
+
+  /* Navbar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 2px solid #e6e6e6;
+  }
+
+  .nav-right {
+    display: flex;
+    gap: 30px;
+  }
+
+  nav a {
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* Page Layout */
+  main {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 40px;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  .project-subtitle {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    opacity: 0.8;
+  }
+
+  p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+  }
+
+  /* Project Images */
+.project-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 40px auto;
+  border-radius: 8px;
+}
+.project-image-small {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 30px auto;
+  border-radius: 8px;
+}
+li{
+  margin-top: 15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-left">
+    <a href="index.html">Home</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="hobbies.html">Hobbies</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="cv.html">CV</a>
+  </div>
+</nav>
+
+<main>
+
+  <h1>Product and Production Systems Optimisation Case Study: Suitcase Manufacturing Plant</h1>
+  <div class="project-subtitle"></div>
+<h4>Project overview</h4>
+<p>This project investigated how to optimise a consumer product design and its supporting production system. The product was a hard-shell suitcase of a hypothetical brand 'ShellyCase'.  Two key performance indicators were targeted: manufacturing throughput and component durability.</p>
+<img src="project-Production-Systems/suitcase.png" alt="Site Plan" class="project-image-small" style="max-width:600px">
+
+
+<h4>Production system modelling</h4>
+<p>A discrete-event factory simulation was developed in SIMIO to analyse the existing production line. Processing times, layout constraints, and buffer capacities were incorporated. This established a baseline throughput and identified bottlenecks.</p>
+
+<h4>Throughput optimisation</h4>
+<p>Factory layout changes included reducing storage footprint, adding a second extrusion machine, and rebalancing assembly operations. Buffer sizes were adjusted to stabilise flow. These changes more than doubled throughput while improving machine utilisation. Higher production required revised shipping schedules and increased component supply rates. Cost implications were assessed against projected revenue growth. The optimised system demonstrated improved scalability for future demand.</p>
+<img src="project-Production-Systems/Factory Layout.png" alt="Site Plan" class="project-image">
+
+<h4>Product durability analysis</h4>
+<p>Warranty data indicated wheel failure as the primary reliability issue. Alternative wheel designs from the existing supplier were evaluated. This avoided disruption to the established supply chain.</p>
+
+<h4>FEA design optimisation</h4>
+<p>Dynamic impact simulations compared double-spinner and single-spinner wheel designs. Stress analysis showed improved load tolerance for the single-wheel configuration. The proposed change significantly increased the estimated safety factor.</p>
+
+<h4>Project outcome</h4>
+<p>The combined optimisations increased production throughput by over 100% and improved wheel impact safety factor by roughly 70%. Further physical testing and supply chain refinement were recommended before full implementation.</p>
+
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dynamics and Advanced Control: 2-DOF Robot Arm</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #0a3d91;
+  }
+
+  a {
+    color: #0a3d91;
+    text-decoration: none;
+  }
+
+  /* Navbar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 2px solid #e6e6e6;
+  }
+
+  .nav-right {
+    display: flex;
+    gap: 30px;
+  }
+
+  nav a {
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* Page Layout */
+  main {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 40px;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  .project-subtitle {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    opacity: 0.8;
+  }
+
+  p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+  }
+
+  /* Project Images */
+.project-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 40px auto;
+  border-radius: 8px;
+}
+.project-image-small {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 30px auto;
+  border-radius: 8px;
+}
+li{
+  margin-top: 15px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-left">
+    <a href="index.html">Home</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="hobbies.html">Hobbies</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="cv.html">CV</a>
+  </div>
+</nav>
+
+<main>
+
+  <h1>Dynamics and Advanced Control: 2-DOF Robot Arm</h1>
+  <div class="project-subtitle"></div>
+
+<h4>System Design</h4>
+<p>
+A two-degree-of-freedom robotic arm was designed to accurately draw geometric shapes. The arm lengths were optimised to minimise the jerk experienced by the motors (third derivative of motor angle), resulting in smoother changes in tip velocity. The motor driving the second arm was moved out of axis with a chain to reduce the moment of inertia of the robot arm improving controllability. 
+</p> 
+<img src="project-Robot-Arm/robot-arm-schematic.png" alt="Robot Arm Schematic" class="project-image-small">
+
+
+<h4>Signal Conditioning</h4>
+<p>
+The target x-y paths were converted into motor angles with inverse kinematics. High-resolution encoder feedback was processed in Arduinno C++ providing real-time data on the motor angle. Initially, independent PID controllers were used to regulate each motor position.  Gains were derived from experimentally fitted transfer functions. The PID signal was conditioned with several techniques to ensure a stable and responsive controller:
+
+<ul>
+  <li>Control loop timing - Each loop within the controller was set to 250μs to ensure the integral and derivative calculations were not affected by variable calculation times within each loop.</li>
+  <li>Derivative smoothing - Fast loop updates often produced unchanged positional error, causing derivative spikes. A rolling average was applied to reduce high-frequency noise.
+  <li>Integral wind-up - The integral term was reset when the error exceeded a defined threshold, reducing overshoots.</li>
+  <li>Reference Signal conditioning - A parametric formula was used to smoothly control the speed of the robot arm between the vertices of the shapes.</li>
+</ul>
+
+</p>
+
+<h4>Implementing Advanced Control Strategies</h4>
+<p> 
+Several non-linearities impacted the performance of the PID controller. Mechanical friction created motor dead zones, which reduced responsiveness at low inputs. To combat this, high-frequency dithering was introduced to overcome this threshold improving path accuracy.
+</p> 
+<img src="./project-Robot-Arm/motor-deadzone.png" alt="CAD" class="project-image-small">
+<p> 
+Gearbox and chain backlash caused positional lag during direction changes. The backlash was experimentally measured and a compensated reference signal offset this error whch improved accuracy particularly at sharp trajectory transitions.
+</p> 
+<img src="./project-Robot-Arm/backlash.webp" alt="CAD" class="project-image-small">
+<p> 
+Controller gains were adjusted with gain scheduling, where PID gains were varied across different motor speed regions, improving responsiveness where fixed PID tuning performed poorly. This provided more consistent tracking performance across the full velocity range.
+</p> 
+
+<p> 
+A state-space model of the robot arm was derived to capture system dynamics of the joint coupling. The state-space controller was simulated in MATLAB Simulink and showed that pole placement could improve tracking performance and stability. However, further experimental testing was required to identify accurate system parameters before a reliable controller could be implemented.
+</p> 
+
+<p> 
+Combined optimisation and nonlinear compensation produced accurate drawings within ±1 mm tolerance. Each trajectory completed in five seconds. Dithering and backlash compensation delivered the most noticeable improvements.
+</p> 
+
+<img src="./project-Robot-Arm/results.png" alt="CAD" class="project-image">
+
+</main>
+
+</body>
+</html>
