@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Building Fault Detection - Turnstone Construction</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #0a3d91;
+  }
+
+  a {
+    color: #0a3d91;
+    text-decoration: none;
+  }
+
+  /* Navbar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 2px solid #e6e6e6;
+  }
+
+  .nav-right {
+    display: flex;
+    gap: 30px;
+  }
+
+  nav a {
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  /* Page Layout */
+  main {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 40px;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+  }
+
+  .project-subtitle {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    opacity: 0.8;
+  }
+
+  p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+  }
+
+  /* Project Images */
+  .project-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 40px auto;
+    border-radius: 8px;
+  }
+  .project-image-small {
+    max-width: 550px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 8px;
+  }
+
+  li {
+    margin-top: 0px;
+    margin-bottom: 20px; 
+  }
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-left">
+    <a href="index.html">Home</a>
+  </div>
+
+  <div class="nav-right">
+    <a href="hobbies.html">Hobbies</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="cv.html">CV</a>
+  </div>
+</nav>
+
+<main>
+<h1>Building Façade Fault Detection – Turnstone Construction</h1>
+<div class="project-subtitle">AI-Assisted Automated Building Inspection Prototype</div>
+
+<h3>Project Overview</h3>
+<p>
+During my internship at <a href="https://www.linkedin.com/company/turnstone-construction-ltd/posts/?feedView=all" style="color: #006fed; text-decoration: underline;" target="_blank">Turnstone Construction</a>, I contributed to the development 
+of an automated building façade inspection system. The goal was to improve the speed, safety, and accuracy of condition monitoring on high-rise buildings. 
+The concept involved mounting an imaging system onto the cradle of a Building 
+Maintenance Unit (BMU) so that façades could be continuously scanned during 
+routine window-cleaning operations.
+</p>
+
+<p>
+I designed a working prototype capable of capturing high-resolution façade imagery 
+and running onboard computer-vision analysis to detect defects such as cracks, 
+corrosion, seal failures, and other surface faults. The collected data was processed 
+using a trained AI vision model which automatically flagged potential issues for 
+building management review.
+</p>
+
+<img src="project-FAI/FAI.jpg" alt="Prototype CAD and hardware" class="project-image">
+
+<h3>My Contributions</h3>
+<p>
+I was responsible for the end-to-end prototype design and integration, including:
+</p>
+
+<ul>
+  <li><strong>Mechanical design:</strong> Designed the protective casing and mounting interface for the unit, ensuring secure attachment to the BMU cradle while maintaining environmental protection, vibration resistance, and serviceability.</li>
+  <li><strong>Electronics design:</strong> Designed the circuitry supporting the microcomputer and onboard cameras, including power distribution, signal routing, and integration of peripheral sensors required for reliable outdoor operation.</li>
+  <li><strong>Embedded AI deployment:</strong> Implemented the computer-vision model on an NVIDIA Jetson platform, optimising inference performance and deploying the supporting code for real-time image capture, processing, and fault reporting.</li>
+</ul>
+<br>
+<h3>Example Detection Outputs</h3>
+
+<img src="project-FAI/failure.jpg" alt="Detected façade faults" class="project-image">
+<img src="project-FAI/failure2.jpg" alt="Detected façade faults" class="project-image">
+
+<p>
+The prototype successfully demonstrated automated façade inspection in a real 
+operational environment. Following validation trials, the project secured further 
+investment and was subsequently developed commercially as a <a href="https://facadeai.com/" style="color: #006fed; text-decoration: underline;" target="_blank">Façade AI Ltd</a>.
+</p>
+
+
+
+</main>
+
+</body>
+</html>
